@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<div class="container-fluid">
+    <div class="col-sm-12 bg-dark">
+        <form id="form1" runat="server">
+            <button name="button" value="devsearch" class="btn btn-warning btn-circle btn-xl" asp-action="ButtonPress" id="devSearch">Search Devices</button>
+            <button name="button" value="powerValue" class="btn btn-secondary btn-circle btn-xl" asp-action="ButtonPress" id="powerID">power</button>
+            <button name="button" value="muteValue" class="btn btn-dark btn-circle btn-xl" asp-action="ButtonPress" id="muteID">mute</button>
+            <div class="btn-group-vertical">
+                <button name="button" value="volumeUpValue" class="btn btn-success btn-circle btn-xl" asp-action="ButtonPress" id="volumeUpID">Volume +</button>
+                <button name="button" value="volumeDownValue" class="btn btn-danger btn-circle btn-xl" asp-action="ButtonPress" id="volumeDownID">Volume -</button>
+            </div>
+            <div class="btn-group-vertical">
+                <button name="button" value="channelUp" class="btn btn-success btn-circle btn-xl" asp-action="ButtonPress" id="channelUpID">Channel +</button>
+                <button name="button" value="channelDown" class="btn btn-danger btn-circle btn-xl" asp-action="ButtonPress" id="channelDownID">Channel -</button>
+            </div>
+            @*<button name="button" value="devsearch" class="btn btn-warning btn-circle btn-xl" asp-action="ButtonPress" id="searchDevicesID">Search Devices</button>*@
+        </form>
+
+        </div>
+    </div>
+</div>
