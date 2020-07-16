@@ -32,8 +32,6 @@ namespace WebApplication2.Controllers
         public IActionResult ButtonPress(string button)
         {
             // cycle through
-            // mute
-            // on/off
             // sources
 
             // For some you only need one button, writing multiple if elses would be a waste of valueable readability resources and much other stuff.
@@ -42,15 +40,9 @@ namespace WebApplication2.Controllers
                 button = new ByteMessageSender(hexStringCommand: ByteTVCommandsMessageModel.KnownTVCommands[button]).Result;
             }
 
-            //JSONMessageSender jSONMessageSender = new JSONMessageSender(JSONMessage:JSONTVCommandsMessageModel.KnownTVCommands[button]);
+
             ByteMessageSender byteMessageSender = new ByteMessageSender(hexStringCommand: ByteTVCommandsMessageModel.KnownTVCommands[button]);
 
-            //else 
-            //{
-            //JSONMessageSender jSONMessageSender = new JSONMessageSender(JSONMessage: JSONTVCommandsMessageModel.KnownTVCommands[button]);
-
-
-            //}
             return RedirectToAction("Index");
         }
 
