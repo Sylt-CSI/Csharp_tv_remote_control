@@ -19,7 +19,7 @@ namespace WebApplication2.CommunicationProtocols
                 var client = new TcpClient(hostname, port);
                 NetworkStream ns = client.GetStream();
                 ns.Write(Encoding.ASCII.GetBytes(hexStringCommand));
-                byte[] bytes = new byte[1024];
+                byte[] bytes = new byte[24];
                 result = Encoding.ASCII.GetString(bytes, 0, ns.Read(bytes, 0, bytes.Length));
                 client.Close();
             }

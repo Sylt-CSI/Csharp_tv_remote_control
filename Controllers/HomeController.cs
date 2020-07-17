@@ -21,6 +21,9 @@ namespace WebApplication2.Controllers
 
         public IActionResult Index()
         {
+            //ErrorViewModel _MODEL = new ErrorViewModel();
+            //_MODEL.RequestId = "34566456";
+            //return View(_MODEL);
             return View();
         }
 

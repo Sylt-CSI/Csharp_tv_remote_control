@@ -10,7 +10,6 @@ namespace WebApplication2.CommunicationProtocols
             Result = SendJSONMessage(JSONMessage, address, requestMethod);
         }
 
-        
         private string SendJSONMessage(string JSONMessage, string webAddress, string method)
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddress);
